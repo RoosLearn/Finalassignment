@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "exec": "npx ts-node ./src/server.ts",
-    "start": "npm run build && node build/server.js",
+    "start": "npm run build && node build/server.ts",
     "build": "rimraf ./build && tsc"
   },
   "keywords": [],
