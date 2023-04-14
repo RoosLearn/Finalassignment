@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "exec": "npx ts-node ./src/server.ts",
-    "start:dev": "npx nodemon"
+    "start": "npm run build && node build/server.js",
+    "build": "rimraf ./build && tsc"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.11",
+    "rimraf": "^5.0.0",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
