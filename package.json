@@ -2,12 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "ext": ".ts,.js",
     "lint": "eslint src",
     "exec": "npx ts-node ./src/server.ts",
-    "start": "npm run build && node build/server.ts",
+    "start:dev": "npx nodemon",
+    "start": "npm run build && node build/server.js",
     "build": "rimraf ./build && tsc"
   },
   "keywords": [],
